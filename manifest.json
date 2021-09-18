@@ -5,12 +5,12 @@
     "version": "0.1.0",
     "manifest_version": 2,
     "browser_action": {
-      "default_icon": "assets/extension-icons/logo-32.png"
+      "default_icon": "assets/extension-icons/notifications-off-32.png"
     },
     "icons": {
-    "16": "assets/extension-icons/logo-16.png",
-    "128": "assets/extension-icons/logo-128.png",
-    "48": "assets/extension-icons/logo-48.png"
+    "16": "assets/extension-icons/notifications-on-16.png",
+    "128": "assets/extension-icons/notifications-on-128.png",
+    "48": "assets/extension-icons/notifications-on-48.png"
     },
     "background": {
         "scripts": ["js/background.js"],
