@@ -4,3 +4,4 @@ const getHost = () => {
     return host
 }
 removeBadges(getHost())
+// #c42523
