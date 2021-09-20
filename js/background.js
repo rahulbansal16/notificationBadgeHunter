@@ -18,19 +18,19 @@ const fetchTabs = () => {
     })
 }
 
-// chrome.webNavigation.onHistoryStateUpdated.addListener( () => {
-//     console.log('Inside the onHistoryStateUpdated method')
-//     fetchTabs().then( tabs => tabs[0].id && raiseBlockAdEvent(tabs[0].id))
-//     // chrome.tabs.query({active: true, currentWindow: true},
-//     //     function(tabs){
-//     //         if(tabs[0].id) raiseBlockAdEvent(tabs[0].id)
-//     //     }
-//     // );
-//     // chrome.tabs.sendMessage({
-//     //     type:'block-ad'
-//     // })
-//     // fireBlockAd()
-// })
+chrome.webNavigation.onHistoryStateUpdated.addListener( () => {
+    console.log('Inside the onHistoryStateUpdated method')
+    fetchTabs().then( tabs => tabs[0].id && raiseBlockAdEvent(tabs[0].id))
+    // chrome.tabs.query({active: true, currentWindow: true},
+    //     function(tabs){
+    //         if(tabs[0].id) raiseBlockAdEvent(tabs[0].id)
+    //     }
+    // );
+    // chrome.tabs.sendMessage({
+    //     type:'block-ad'
+    // })
+    // fireBlockAd()
+})
 
 chrome.webNavigation.onCompleted.addListener(() => {
     console.log('Inside the onCompleted method')
