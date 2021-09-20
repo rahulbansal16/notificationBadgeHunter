@@ -5,7 +5,7 @@ const distractions  = {
         // I will have to create the Xpath identifier for the element
         notifications: [{
             type: 'div',
-            class: 'mail-status unread'
+            class: 'mail-status'
         }],
         title:'Github'
     },
@@ -134,7 +134,7 @@ const generateCSSRule = (website) => {
     return cssRule
 }
 
-const modifyTitle = (website) => {
+const modifyTitle = (website    ) => {
     const header = distractions[website]
     if (!header){
         return ""
