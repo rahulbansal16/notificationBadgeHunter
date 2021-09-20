@@ -100,3 +100,33 @@ const removeBadges = (website) => {
         }
     }
 }
+
+const ruleByClassName= (className) => {
+    return "." + className + "{display:none !important};";
+    // const elements = document.getElementsByClassName(className);
+    // removeElements(elements)
+}
+
+const ruleById = (id) => {
+    return "#" + id + "{display:none !important};";
+}
+
+// style.textContent = '.indicator-badge {display:none !important;}';
+const generateCSSRule = (website) => {
+    // console.log('Removing the badges');
+    const header = distractions[website]
+    if (!header){
+        return ""
+    }
+    let cssRule = ""
+    for (let data of header.notifications){
+        const className = data.class
+        if (className){
+            cssRule = cssRule + '\n' + ruleByClassName(className)
+        } else {
+            cssRule = cssRule + '\n' + ruleById(className)
+        }
+    }
+    console.log('The CSS Rule is ', cssRule)
+    return cssRule
+}

@@ -22,7 +22,8 @@
             "matches": [
             "<all_urls>"
             ],
-            "js": ["js/blocker.js","js/detect.js"]
+            "js": ["js/blocker.js","js/detect.js"],
+            "run_at": "document_start"
         }
     ]
     }
