@@ -1,8 +1,9 @@
 const getHost = () => {
-    let host = window.location.host
-    host = host.replace("www.","")
-    return host
+    let host_ = window.location.host
+    host_ = host_.replace("www.","")
+    return host_
 }
+const host = getHost()
 // #c42523
 // removeBadges(getHost())
 // const links = document.querySelectorAll('link[rel=icon]')
@@ -12,14 +13,14 @@ chrome.runtime.onMessage.addListener((request) => {
     console.log('In the Listener for the block-ad ')
     const {type} = request
     if (type === "block-ad"){
-        modifyTitle(getHost())
+        modifyTitle(host)
         // const updatedLinks = document.querySelectorAll('link[rel=icon]')
         // for (var i in updatedLinks){
         //     updatedLinks[i].href = links[i].href
         // }
     }
 })
-console.log(getHost())
+console.log(host)
 var style = document.documentElement.appendChild(document.createElement('style'));
-style.textContent = generateCSSRule(getHost());
+style.textContent = generateCSSRule(host);
 // style.textContent = '.indicator-badge {display:none !important;}';
