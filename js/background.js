@@ -31,7 +31,7 @@ chrome.webNavigation.onCompleted.addListener(() => {
 })
 
 // });
-chrome.webNavigation.onCommitted.addListener(() => {
-    console.log('Inside the onCommitted method')
-    fetchTabs().then( tabs => tabs[0].id && raiseBlockAdEvent(tabs[0].id))
-})
+// chrome.webNavigation.onCommitted.addListener(() => {
+//     console.log('Inside the onCommitted method')
+//     fetchTabs().then( tabs => tabs[0].id && raiseBlockAdEvent(tabs[0].id))
+// })
