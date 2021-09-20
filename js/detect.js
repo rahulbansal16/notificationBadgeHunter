@@ -3,5 +3,12 @@ const getHost = () => {
     host = host.replace("www.","")
     return host
 }
-removeBadges(getHost())
 // #c42523
+removeBadges(getHost())
+chrome.runtime.onMessage.addListener((request) => {
+    console.log('In the Listener for the block-ad ')
+    const {type} = request
+    if (type === "block-ad"){
+        removeBadges(getHost())
+    }
+})

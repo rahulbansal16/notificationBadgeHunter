@@ -86,6 +86,7 @@ const removeElementById = (id) => {
 }
 
 const removeBadges = (website) => {
+    console.log('Removing the badges');
     const header = distractions[website]
     if (!header){
         return
