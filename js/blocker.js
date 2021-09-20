@@ -6,7 +6,8 @@ const distractions  = {
         notifications: [{
             type: 'div',
             class: 'mail-status unread'
-        }]
+        }],
+        title:'Github'
     },
 
     "linkedin.com": {
@@ -14,6 +15,7 @@ const distractions  = {
         // <span class="notification-badge notification-badge--show "> <span aria-hidden="true" class="notification-badge__no-count"></span> <span class="a11y-text" data-test-notification-a11y="">new feed updates notifications</span> </span>
         // <button class="artdeco-button feed-new-update-pill__new-update-button Elevation-6dp justify-flex-start " type="button" data-ember-action="" data-ember-action-382="382"> <div class="feed-new-update-pill__loader"> <div id="ember383" class="feed-new-update-pill__loader-icon artdeco-loader artdeco-loader--small artdeco-loader--inverse ember-view"><!----> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> </div> </div> <div class="feed-new-update-pill__text"> <li-icon aria-hidden="true" type="arrow-up-icon" class="feed-new-update-pill__up-icon mr1" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false"> <path d="M13 7L9 4.16V14H7V4.16L3 7V4.55L8 1l5 3.55z"></path> </svg></li-icon> <span> New posts </span> </div> </button>
         // <span class="notification-badge notification-badge--show "> <span aria-hidden="true" class="notification-badge__count ">1</span> <span class="a11y-text" data-test-notification-a11y="">1 new notification</span> </span>
+        title:'',
         notifications: [{
             type: 'div',
             class: 'notification-badge'
@@ -51,6 +53,7 @@ const distractions  = {
     },
 
     "reddit.com": {
+        title: 'Reddit - Dive into anything',
         notifications: [{
             type: 'div',
             class: '_1-nIsCaWhGBFN-L4ZHnbGp'
@@ -129,4 +132,12 @@ const generateCSSRule = (website) => {
     }
     console.log('The CSS Rule is ', cssRule)
     return cssRule
+}
+
+const modifyTitle = (website) => {
+    const header = distractions[website]
+    if (!header){
+        return ""
+    }
+    document.title = header.title;
 }
