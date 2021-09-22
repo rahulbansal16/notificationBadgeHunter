@@ -48,8 +48,14 @@ const distractions  = {
         }]
     },
 
-    "gmail": {
-
+    "mail.google.com": {
+        notifications: [{
+            type: "div",
+            class: 'aDG'
+        }, {
+            type: "div",
+            class: 'aKs'
+        }]
     },
 
     "reddit.com": {
