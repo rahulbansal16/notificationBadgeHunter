@@ -74,6 +74,13 @@ const distractions  = {
             type: 'div',
             class:'KdEwV'
         }]
+    },
+
+    "youtube.com": {
+        notifications: [{
+            type: 'div',
+            id: "notification-count"
+        }]
     }
 }
 
@@ -133,7 +140,7 @@ const generateCSSRule = (website) => {
         if (className){
             cssRule = cssRule + '\n' + ruleByClassName(className)
         } else {
-            cssRule = cssRule + '\n' + ruleById(className)
+            cssRule = cssRule + '\n' + ruleById(data.id)
         }
     }
     console.log('The CSS Rule is ', cssRule)
