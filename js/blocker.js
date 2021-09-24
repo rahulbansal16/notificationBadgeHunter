@@ -66,7 +66,16 @@ const distractions  = {
         }, {
             type: 'div',
             class: '_1-nIsCaWhGBFN-L4ZHnbGp '
-        }]
+        },
+        {   type: 'div',
+            class: '_1PPMaBuBIFqAY5VrSWww3Y'
+        },
+        {
+        // class="cmR5BF4NpBUm3DBMZCmJS _2R__ntXP0SJs6INH-bBBFn" CGFfgr
+            type: 'div',
+            class: 'cmR5BF4NpBUm3DBMZCmJS'
+        }
+        ]
     },
 
     "instagram.com": {
