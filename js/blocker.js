@@ -33,6 +33,9 @@ const distractions  = {
         }, {
             type: 'div',
             id: 'review-button'
+        },{
+            type: 'div',
+            class: '_highlighted-positive'
         }]
     },
 
