@@ -30,7 +30,8 @@ const distractions = {
     ],
     cssRules: [
       ".notification-badge {display:none !important}\n",
-      "feed-new-update-pill {display:none !important}\n",
+      ".feed-new-update-pill {display:none !important}\n",
+      ".feed-new-update-pill__loader {display: none !important}\n",
     ],
   },
 
