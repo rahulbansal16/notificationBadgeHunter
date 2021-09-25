@@ -64,6 +64,7 @@ const distractions = {
   "medium.com": {
     notifications: [{}],
     cssRules: [],
+    title: "Medium - Where good ideas found you "
   },
 
   // <div dir="auto" aria-label="1 unread items" aria-live="polite" class="css-901oao r-1awozwy r-l5o3uw r-1xc7w19 r-sdzlij r-1phboty r-rs99b7 r-1tjplnt r-jwli3a r-6koalj r-1q142lx r-37j5jr r-1gkfh8e r-16dba41 r-10ptun7 r-1777fci r-56xrmm r-285fr0 r-u8s1d r-kquydp r-1m4drjs r-lrvibr r-3s2u2q r-qvutc0"><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">1</span></div>
@@ -87,6 +88,7 @@ const distractions = {
       ".aDG {display:none !important} \n",
       ".aKs {display:none !important}\n",
     ],
+    title: "Gmail"
   },
 
   "reddit.com": {
@@ -115,6 +117,7 @@ const distractions = {
   },
 
   "instagram.com": {
+    title: "Instagram",
     notifications: [
       {
         type: "div",
@@ -125,6 +128,7 @@ const distractions = {
   },
 
   "youtube.com": {
+    title: "YouTube",
     notifications: [
       {
         type: "div",
