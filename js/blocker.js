@@ -92,8 +92,15 @@ const distractions = {
     title: "Gmail"
   },
 
+    // const links = document.querySelectorAll('link[rel=icon]')
+    // console.log('The links are', links)
+    // href="https://www.redditstatic.com/desktop2x/img/favicon/favicon-32x32.png"
+    // <link rel="icon" type="image/png" sizes="32x32" href="https://www.redditstatic.com/desktop2x/img/favicon/badged-favicon-32x32.png">
+
   "reddit.com": {
     title: "Reddit - Dive into anything",
+    faviconUrl: "https://www.redditstatic.com/desktop2x/img/favicon/favicon-32x32.png",
+    faviconSelector: "link[rel='icon']",
     notifications: [
       {
         type: "div",
@@ -192,6 +199,14 @@ const generateCSSRule = (website) => {
   console.log("The CSS Rule is ", cssRule);
   return cssRule;
 };
+
+const updateFavicon = (website) => {
+    const {faviconSelector, faviconUrl} = distractions[website];
+    const favicons = document.querySelectorAll(faviconSelector);
+    for (let favicon of favicons){
+        favicon.href = faviconUrl
+    }
+}
 
 const modifyTitle = (website) => {
   const header = distractions[website];

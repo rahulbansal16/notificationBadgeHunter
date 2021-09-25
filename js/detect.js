@@ -26,6 +26,7 @@ const initExtension = () => {
         const { type } = request;
         if (type === "block-ad") {
         modifyTitle(host);
+        updateFavicon(host);
         // const updatedLinks = document.querySelectorAll('link[rel=icon]')
         // for (var i in updatedLinks){
         //     updatedLinks[i].href = links[i].href
