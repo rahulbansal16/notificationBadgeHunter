@@ -1,4 +1,4 @@
-console.log("The mosf is getting executed")
+console.log("The mosf is getting executed");
 (function(xhr) {
 
     var XHR = XMLHttpRequest.prototype;
