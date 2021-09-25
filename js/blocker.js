@@ -52,14 +52,16 @@ const distractions  = {
 
     "medium.com": {
         notifications: [{
-        }]
+        }],
+        cssRules: []
     },
 
     // <div dir="auto" aria-label="1 unread items" aria-live="polite" class="css-901oao r-1awozwy r-l5o3uw r-1xc7w19 r-sdzlij r-1phboty r-rs99b7 r-1tjplnt r-jwli3a r-6koalj r-1q142lx r-37j5jr r-1gkfh8e r-16dba41 r-10ptun7 r-1777fci r-56xrmm r-285fr0 r-u8s1d r-kquydp r-1m4drjs r-lrvibr r-3s2u2q r-qvutc0"><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">1</span></div>
     "twitter": {
         notifications: [{
 
-        }]
+        }],
+        cssRules: []
     },
 
     "mail.google.com": {
@@ -69,7 +71,11 @@ const distractions  = {
         }, {
             type: "div",
             class: 'aKs'
-        }]
+        }],
+        cssRules: [
+            ".aDG {display:none !important} \n",
+            ".aKs {display:none !important}\n"
+        ]
     },
 
     "reddit.com": {
@@ -88,7 +94,11 @@ const distractions  = {
         // class="cmR5BF4NpBUm3DBMZCmJS _2R__ntXP0SJs6INH-bBBFn" CGFfgr
             type: 'div',
             class: 'cmR5BF4NpBUm3DBMZCmJS'
-        }
+        }],
+        cssRules: [
+            '._1-nIsCaWhGBFN-L4ZHnbGp {display: none !important} \n',
+            '._1PPMaBuBIFqAY5VrSWww3Y {display: none !important} \n',
+            '.cmR5BF4NpBUm3DBMZCmJS {display:none !important} \n'
         ]
     },
 
@@ -96,14 +106,20 @@ const distractions  = {
         notifications: [{
             type: 'div',
             class:'KdEwV'
-        }]
+        }],
+        cssRules: [
+            '.KdEwV {display:none !important} \n'
+        ]
     },
 
     "youtube.com": {
         notifications: [{
             type: 'div',
             id: "notification-count"
-        }]
+        }],
+        cssRules: [
+            '#notification-count {display:none !important} \n'
+        ]
     }
 }
 
