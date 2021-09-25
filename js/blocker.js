@@ -7,6 +7,7 @@ const distractions  = {
             type: 'div',
             class: 'mail-status'
         }],
+        cssRules: ['.mail-status { display: none !important}\n'],
         title:'Github'
     },
 
@@ -22,7 +23,11 @@ const distractions  = {
         },{
             type: 'div',
             class: 'feed-new-update-pill__new-update-button'
-        }]
+        }],
+        cssRules: [
+            '.notification-badge {display:none !important}\n',
+            'feed-new-update-pill {display:none !important}\n'
+        ]
     },
 
     "stackoverflow.com": {
@@ -34,9 +39,15 @@ const distractions  = {
             type: 'div',
             id: 'review-button'
         },{
-            type: 'div',
-            class: '_highlighted-positive'
-        }]
+            type: 'remove-class',
+            class: '_highlighted-positive',
+            property: ['color']
+        }],
+        cssRules: [
+            '.indicator-badge {display:none !important}\n',
+            '#review-button {display:none !important} \n',
+            '._highlighted-positive { color: unset !important}\n'
+        ]
     },
 
     "medium.com": {
@@ -139,27 +150,17 @@ const ruleById = (id) => {
     return "#" + id + "{display:none !important};";
 }
 
-// style.textContent = '.indicator-badge {display:none !important;}';
 const generateCSSRule = (website) => {
-    // console.log('Removing the badges');
     const header = distractions[website]
     if (!header){
         return ""
     }
-    let cssRule = ""
-    for (let data of header.notifications){
-        const className = data.class
-        if (className){
-            cssRule = cssRule + '\n' + ruleByClassName(className)
-        } else {
-            cssRule = cssRule + '\n' + ruleById(data.id)
-        }
-    }
+    let cssRule = header.cssRules.reduce( (prev, cur) => prev + cur)
     console.log('The CSS Rule is ', cssRule)
     return cssRule
 }
 
-const modifyTitle = (website    ) => {
+const modifyTitle = (website) => {
     const header = distractions[website]
     if (!header){
         return ""
