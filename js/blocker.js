@@ -39,6 +39,7 @@ const distractions = {
 
   "stackoverflow.com": {
     // <span class="indicator-badge js-unread-count _important">1</span>
+    title: "Stackoverflow",
     notifications: [
       {
         type: "div",
