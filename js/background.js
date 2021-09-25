@@ -7,7 +7,7 @@ const raiseBlockAdEvent = (tabid) => {
 
 const fetchTabs = () => {
   return new Promise((resolve, reject) => {
-    chrome.tabs.query({ active: true }, resolve);
+    chrome.tabs.query({ active: true, currentWindow: true }, resolve);
   });
 };
 
