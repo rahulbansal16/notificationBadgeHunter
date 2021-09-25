@@ -32,6 +32,8 @@ const distractions = {
       ".notification-badge {display:none !important}\n",
       ".feed-new-update-pill {display:none !important}\n",
       ".feed-new-update-pill__loader {display: none !important}\n",
+      ".feed-new-update-pill__text { display: none !important}\n",
+      ".feed-new-update-pill__new-update-button {display: none !important}\n",
     ],
   },
 
