@@ -52,3 +52,7 @@ chrome.webNavigation.onCompleted.addListener(() => {
   console.log("Inside the onCompleted method");
   fetchTabs().then((tabs) => tabs[0].id && raiseBlockAdEvent(tabs[0].id));
 });
+
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+    fetchTabs().then((tabs) => tabs[0].id && raiseBlockAdEvent(tabs[0].id));
+});
