@@ -213,9 +213,20 @@ const updateFavicon = (website) => {
 }
 
 const modifyTitle = (website) => {
-  const header = distractions[website];
-  if (!header) {
-    return "";
-  }
-  document.title = header.title;
+    var title = document.title;
+    var newTitle = "";
+    var skip = false;
+    for (let ch of title){
+        if (ch === '('){
+            skip = true;
+        }else if ( ch === ')'){
+            skip = false
+        }else if (skip){
+            continue;
+        }else {
+            newTitle = newTitle + ch;
+        }
+    }
+  console.log("The title is",title);
+  document.title = newTitle.trim();
 };
