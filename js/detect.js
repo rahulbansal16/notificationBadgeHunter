@@ -39,6 +39,14 @@ const initExtension = () => {
     );
     style.textContent = generateCSSRule(host);
     // style.textContent = '.indicator-badge {display:none !important;}';
+
+    var s = document.createElement("script");
+    s.src = chrome.extension.getURL("./js/mosf.js");
+    s.onload = function () {
+        this.remove();
+    };
+    (document.head || document.documentElement).appendChild(s);
+
     chrome.runtime.sendMessage({
         type: "block-http",
     });
