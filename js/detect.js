@@ -39,27 +39,15 @@ const initExtension = () => {
     );
     style.textContent = generateCSSRule(host);
     // style.textContent = '.indicator-badge {display:none !important;}';
-
-    var s = document.createElement("script");
-    s.src = chrome.extension.getURL("./js/mosf.js");
-    s.onload = function () {
-        this.remove();
-    };
-    (document.head || document.documentElement).appendChild(s);
-
-    const observer = new MutationObserver((mutations) => {
-        modifyTitle(mutations[0].target.text)
-        // console.log(mutations[0].target.text);
-   });
-   
-   observer.observe(document.querySelector("title"), {
-     subtree: true,
-     characterData: true,
-     childList: true,
-   })
-
     chrome.runtime.sendMessage({
         type: "block-http",
     });
+
+    observer.observe(document.querySelector("title"), {
+        subtree: true,
+        characterData: true,
+        childList: true,
+      })
+   
 }
 
