@@ -212,8 +212,9 @@ const updateFavicon = (website) => {
     }
 }
 
-const modifyTitle = (website) => {
-    var title = document.title;
+const modifyTitle = (title) => {
+    // var title = document.title;
+    console.log('In the call to modifyTitle', title);
     var newTitle = "";
     var skip = false;
     for (let ch of title){
@@ -228,5 +229,6 @@ const modifyTitle = (website) => {
         }
     }
   console.log("The title is",title);
-  document.title = newTitle.trim();
+  if (title.trim() !== newTitle.trim())
+    document.title = newTitle.trim();
 };
