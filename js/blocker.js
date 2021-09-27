@@ -212,8 +212,8 @@ const updateFavicon = (website) => {
     }
 }
 
-const modifyTitle = (title) => {
-    // var title = document.title;
+const modifyTitle = () => {
+    var title = document.title;
     console.log('In the call to modifyTitle', title);
     var newTitle = "";
     var skip = false;
