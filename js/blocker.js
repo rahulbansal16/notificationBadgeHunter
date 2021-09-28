@@ -240,7 +240,7 @@ const modifyTitle = () => {
 };
 
 const throttleXHTTP = (host) => {
-  const header = distractions[website];
+  const header = distractions[host];
   if (!header.throttle){
     console.log("Not throttling the request");
     return
