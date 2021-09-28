@@ -238,3 +238,18 @@ const modifyTitle = () => {
   if (title.trim() !== newTitle.trim())
     document.title = newTitle.trim();
 };
+
+const throttleXHTTP = (host) => {
+  const header = distractions[website];
+  if (!header.throttle){
+    console.log("Not throttling the request");
+    return
+  }
+  console.log("Throttling the request");
+  var s = document.createElement("script");
+  s.src = chrome.extension.getURL("./js/mosf.js");
+  s.onload = function () {
+      this.remove();
+  };
+  (document.head || document.documentElement).appendChild(s);
+}
