@@ -20,7 +20,9 @@
     "webNavigation",
     "activeTab",
     "tabs",
-    "storage"
+    "storage",
+    "http://*/",
+    "https://*/"
   ],
   "web_accessible_resources": ["js/mosf.js"],
   "content_scripts": [

@@ -9,6 +9,7 @@ const distractions = {
       },
     ],
     cssRules: [".mail-status { display: none !important}\n"],
+    throttle: false,
     title: "Github",
   },
 
@@ -18,6 +19,7 @@ const distractions = {
     // <button class="artdeco-button feed-new-update-pill__new-update-button Elevation-6dp justify-flex-start " type="button" data-ember-action="" data-ember-action-382="382"> <div class="feed-new-update-pill__loader"> <div id="ember383" class="feed-new-update-pill__loader-icon artdeco-loader artdeco-loader--small artdeco-loader--inverse ember-view"><!----> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> <span class="artdeco-loader__bars"></span> </div> </div> <div class="feed-new-update-pill__text"> <li-icon aria-hidden="true" type="arrow-up-icon" class="feed-new-update-pill__up-icon mr1" size="small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false"> <path d="M13 7L9 4.16V14H7V4.16L3 7V4.55L8 1l5 3.55z"></path> </svg></li-icon> <span> New posts </span> </div> </button>
     // <span class="notification-badge notification-badge--show "> <span aria-hidden="true" class="notification-badge__count ">1</span> <span class="a11y-text" data-test-notification-a11y="">1 new notification</span> </span>
     title: "Linkedin",
+    throttle: true,
     faviconUrl: "https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca",
     faviconSelector: "link[id='favicon-ico']",
     notifications: [
@@ -44,6 +46,7 @@ const distractions = {
   "stackoverflow.com": {
     // <span class="indicator-badge js-unread-count _important">1</span>
     title: "Stackoverflow",
+    throttle: false,
     notifications: [
       {
         type: "div",
@@ -103,6 +106,7 @@ const distractions = {
 
   "reddit.com": {
     title: "Reddit - Dive into anything",
+    throttle: true,
     faviconUrl: "https://www.redditstatic.com/desktop2x/img/favicon/favicon-32x32.png",
     faviconSelector: "link[rel='icon']",
     notifications: [
@@ -130,6 +134,7 @@ const distractions = {
 
   "instagram.com": {
     title: "Instagram",
+    throttle: true,
     notifications: [
       {
         type: "div",
@@ -141,6 +146,7 @@ const distractions = {
 
   "youtube.com": {
     title: "YouTube",
+    throttle: true,
     notifications: [
       {
         type: "div",
@@ -232,3 +238,18 @@ const modifyTitle = () => {
   if (title.trim() !== newTitle.trim())
     document.title = newTitle.trim();
 };
+
+const throttleXHTTP = (host) => {
+  const header = distractions[host];
+  if (!header.throttle){
+    console.log("Not throttling the request");
+    return
+  }
+  console.log("Throttling the request");
+  var s = document.createElement("script");
+  s.src = chrome.extension.getURL("./js/mosf.js");
+  s.onload = function () {
+      this.remove();
+  };
+  (document.head || document.documentElement).appendChild(s);
+}

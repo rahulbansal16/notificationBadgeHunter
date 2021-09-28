@@ -39,6 +39,7 @@ const initExtension = () => {
     );
     style.textContent = generateCSSRule(host);
     // style.textContent = '.indicator-badge {display:none !important;}';
+    throttleXHTTP(host)
     chrome.runtime.sendMessage({
         type: "block-http",
     });
