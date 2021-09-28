@@ -42,7 +42,11 @@ const initExtension = () => {
     chrome.runtime.sendMessage({
         type: "block-http",
     });
-
+    
+    const observer = new MutationObserver((mutations) => {
+        modifyTitle(mutations[0].target.text)
+        // console.log(mutations[0].target.text);
+    });
     observer.observe(document.querySelector("title"), {
         subtree: true,
         characterData: true,
