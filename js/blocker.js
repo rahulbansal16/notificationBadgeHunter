@@ -8,7 +8,10 @@ const distractions = {
         class: "mail-status",
       },
     ],
-    cssRules: [".mail-status { display: none !important}\n"],
+    cssRules: [
+      ".mail-status { display: none !important}\n",
+      ".feature-preview-indicator { display: none !important}\n"
+    ],
     throttle: false,
     title: "Github",
   },
