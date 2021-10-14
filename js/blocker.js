@@ -41,6 +41,8 @@ const distractions = {
       ".feed-new-update-pill__loader {display: none !important}\n",
       ".feed-new-update-pill__text { display: none !important}\n",
       ".feed-new-update-pill__new-update-button {display: none !important}\n",
+      ".artdeco-button__text {display: none !important}",
+      ",artdeco-button__icon {display: none !important}"
     //   ".profile-rail-card__actor-link {display: none !important}\n",
     //   ".identity-headline {display:none !important}\n"
     ],
