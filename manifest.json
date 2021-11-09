@@ -20,6 +20,7 @@
     "webNavigation",
     "activeTab",
     "tabs",
+    "alarms",
     "storage",
     "http://*/",
     "https://*/"

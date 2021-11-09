@@ -1,3 +1,4 @@
+let alarm = null
 const raiseBlockAdEvent = (tabid) => {
   console.log("Raised a Block Ad Event");
   chrome.tabs.sendMessage(tabid, {
@@ -18,6 +19,7 @@ chrome.runtime.onInstalled.addListener( () => {
     }, (result) => {
         console.log("The result", result);
     })
+    toggleStateToOffAfter20Minutes()
 })
 
 
@@ -25,6 +27,22 @@ chrome.browserAction.onClicked.addListener( () => {
     console.log('The extension icon is clicked');
     toggleState()
 })
+
+const toggleStateToOffAfter20Minutes = () => {
+  alarm = chrome.alarms.create("enableBlocker", {
+    delayInMinutes: 10,
+    periodInMinutes: 10
+  })
+}
+
+chrome.alarms.onAlarm.addListener(
+  () => {
+    console.log("Setting the state of the notification to off")
+    chrome.storage.sync.set({
+      notification:"off"
+    })
+  },
+)
 
 const toggleState = () => {
     chrome.storage.sync.get(['notification'], (result) => {
