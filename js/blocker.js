@@ -82,9 +82,16 @@ const distractions = {
   },
 
   // <div dir="auto" aria-label="1 unread items" aria-live="polite" class="css-901oao r-1awozwy r-l5o3uw r-1xc7w19 r-sdzlij r-1phboty r-rs99b7 r-1tjplnt r-jwli3a r-6koalj r-1q142lx r-37j5jr r-1gkfh8e r-16dba41 r-10ptun7 r-1777fci r-56xrmm r-285fr0 r-u8s1d r-kquydp r-1m4drjs r-lrvibr r-3s2u2q r-qvutc0"><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">1</span></div>
-  twitter: {
+  "twitter.com": {
     notifications: [{}],
-    cssRules: [],
+    cssRules: [
+      // class="css-1dbjc4n r-1igl3o0 r-qklmqi r-1adg3ll r-1ny4l3l"
+      "div[aria-label='New Tweets are available. Push period to go to the beginning of your timeline and view them'] {display:none !important}\n",
+      ".css-1dbjc4n.r-1igl3o0.r-qklmqi.r-1adg3ll.r-1ny4l3l {display:none !important}\n",
+      // ".css-1dbjc4n .r-l5o3uw .r-sdzlij .r-1yadl64 .r-1ozsyd3 .r-u8s1d .r-1gg5ah6 .r-1ld3bg .r-lrvibr .r-12rgx7y {dispay:none !important}\n",
+      // ".css-1dbjc4n .r-18u37iz .r-oyd9sg {display:none !important}\n",
+      ".css-1dbjc4n.r-l5o3uw.r-sdzlij.r-1yadl64.r-1ozsyd3.r-u8s1d.r-1gg5ah6.r-1ld3bg.r-lrvibr.r-12rgx7y {display:none !important}\n",
+    ],
   },
 
   "mail.google.com": {
@@ -159,7 +166,15 @@ const distractions = {
         id: "notification-count",
       },
     ],
-    cssRules: ["#notification-count {display:none !important} \n"],
+    cssRules: [
+      "#notification-count {display:none !important} \n",
+     ".style-scope.ytd-feed-filter-chip-bar-renderer {display:none !important} \n",
+     "#contents>.style-scope.ytd-rich-shelf-renderer{display:none !important} \n",
+     "ytd-rich-section-renderer {display:none !important} \n",
+     "#newness-dot { display:none !important} \n",
+     "#chips {display:none !important} \n",
+     "#comment-teaser {display:none !important} \n",
+    ],
   },
 };
 
