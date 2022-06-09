@@ -10,7 +10,8 @@ const distractions = {
     ],
     cssRules: [
       ".mail-status { display: none !important}\n",
-      ".feature-preview-indicator { display: none !important}\n"
+      ".feature-preview-indicator { display: none !important}\n",
+      ".unread-indicator { display: none !important}\n"
     ],
     throttle: false,
     title: "Github",
