@@ -174,6 +174,10 @@ const distractions = {
      "#newness-dot { display:none !important} \n",
      "#chips {display:none !important} \n",
      "#comment-teaser {display:none !important} \n",
+     ".style-scope.ytd-playlist-panel-renderer { display:none !important} \n",
+     "#avatar-link {display:none !important} \n",
+     "#avatar {display:none !important} \n",
+    //  "#contents.>:nth-of-type(1n+10) {display: none;}"
     ],
   },
 };
