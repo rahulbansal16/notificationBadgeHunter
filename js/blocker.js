@@ -87,7 +87,7 @@ const distractions = {
     cssRules: [
       // class="css-1dbjc4n r-1igl3o0 r-qklmqi r-1adg3ll r-1ny4l3l"
       "div[aria-label='New Tweets are available. Push period to go to the beginning of your timeline and view them'] {display:none !important}\n",
-      ".css-1dbjc4n.r-1igl3o0.r-qklmqi.r-1adg3ll.r-1ny4l3l {display:none !important}\n",
+      // ".css-1dbjc4n.r-1igl3o0.r-qklmqi.r-1adg3ll.r-1ny4l3l {display:none !important}\n",
       // ".css-1dbjc4n .r-l5o3uw .r-sdzlij .r-1yadl64 .r-1ozsyd3 .r-u8s1d .r-1gg5ah6 .r-1ld3bg .r-lrvibr .r-12rgx7y {dispay:none !important}\n",
       // ".css-1dbjc4n .r-18u37iz .r-oyd9sg {display:none !important}\n",
       ".css-1dbjc4n.r-l5o3uw.r-sdzlij.r-1yadl64.r-1ozsyd3.r-u8s1d.r-1gg5ah6.r-1ld3bg.r-lrvibr.r-12rgx7y {display:none !important}\n",
