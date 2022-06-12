@@ -2,7 +2,7 @@
   "name": "Red Badge Hunter",
   "description": "Notification Badge Remover",
   "offline_enabled": true,
-  "version": "0.4.2",
+  "version": "0.5.0",
   "manifest_version": 2,
   "browser_action": {
     "default_icon": "assets/extension-icons/notifications-off-32.png"
