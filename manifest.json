@@ -14,7 +14,7 @@
   },
   "background": {
     "scripts": ["js/background.js"],
-    "persistent": false
+    "persistent": true
   },
   "permissions": [
     "webNavigation",
@@ -23,6 +23,8 @@
     "alarms",
     "storage",
     "http://*/",
+    "webRequest",
+    "webRequestBlocking",
     "https://*/"
   ],
   "web_accessible_resources": ["js/mosf.js"],
@@ -31,6 +33,15 @@
       "matches": ["<all_urls>"],
       "js": ["js/blocker.js", "js/detect.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://www.youtube.com/*",
+        "*://m.youtube.com/*"
+      ],
+      "js": [
+        "js/youtube.js"
+      ]
     }
   ]
 }
