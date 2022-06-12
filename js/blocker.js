@@ -25,7 +25,7 @@ const distractions = {
     title: "Linkedin",
     throttle: true,
     faviconUrl: "https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca",
-    faviconSelector: "link[id='favicon-ico']",
+    faviconSelector: "link[id='favicon-svg']",
     notifications: [
       {
         type: "div",
