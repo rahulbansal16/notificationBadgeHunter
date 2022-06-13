@@ -21,11 +21,20 @@
     "activeTab",
     "tabs",
     "alarms",
+    "*://twitter.com/*",
+    "*://medium.com/*",
+    "*://reddit.com/*",
+    "*://linkedin.com/*",
+    "*://github.com/*",
+    "*://stackoverflow.com/*",
+    "*://mail.google.com/*",
+    "*://instagram.com/*",
+    "*://www.youtube.com/*",
+    "*://m.youtube.com/*",
+    "*://i.ytimg.com/*",
     "storage",
-    "http://*/",
     "webRequest",
-    "webRequestBlocking",
-    "https://*/"
+    "webRequestBlocking"
   ],
   "web_accessible_resources": ["js/mosf.js"],
   "content_scripts": [
